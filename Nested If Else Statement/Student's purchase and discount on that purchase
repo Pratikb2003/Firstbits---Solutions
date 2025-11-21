@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+	float price, discount_rate;
+	char is_student;
+	
+	printf("Enter the price: ");
+	scanf("%f" , &price);
+	
+	printf("Are you a student? (y/n): ");
+	scanf("%c", &is_student);
+	
+	if(is_student == 'y' || is_student == 'Y') {
+		if (price > 500) {
+			discount_rate = 0.20;
+		} else {
+			discount_rate = 0.10;
+		}
+	} else {
+		if (price > 600) {
+			discount_rate = 0.15;
+		} else {
+			discount_rate = 0.0;
+		}
+	}
+	
+	float final_price = price - (price * discount_rate);
+	printf("Final price after discount: $%f\n" , final_price);
+}
