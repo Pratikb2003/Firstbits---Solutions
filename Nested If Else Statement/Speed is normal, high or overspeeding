@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+void main() {
+    int speed;
+    printf("Enter speed: ");
+    scanf("%d", &speed);
+
+    if(speed <= 40)
+        printf("Normal speed");
+    else if(speed <= 80)
+        printf("High speed — please slow down");
+    else
+        printf("Overspeeding — Danger!");
+}
