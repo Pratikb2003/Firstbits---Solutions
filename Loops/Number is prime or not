@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+	int no = 7;
+	int i = 2;
+	int isPrime = 1;
+	
+	if (no <= 1) {
+		isPrime = 0;
+	} else {
+		while (i < no) {
+			if(no % i == 0) {
+				isPrime = 0;
+				break;
+			}
+			i++;
+		}
+		
+		if(isPrime == 1) {
+			printf("output: Prime\n" ,no);
+		} else {
+			printf("output: Not Prime\n" ,no);
+		}
+	}
+}
