@@ -1,0 +1,95 @@
+#include<stdio.h>
+void main()
+{
+	int choice, num, i, flag, originalNum, rem, revNum, sum;
+	char continue_choice;
+	
+	do {
+		printf("Menu:\n");
+		printf("1.Check if a number is even or odd\n");
+		printf("2.Check if a number is prime or not\n");
+		printf("3.Check if a number is palindrome or not\n");
+		printf("4.Check if a number is positive, negative, or zero\n");
+		printf("5.Reverse a number\n");
+		printf("6.Find sum of digits\n");
+		printf("Enter your choice: ");
+		scanf("%d" , &choice);
+		
+		printf("Enter a number: ");
+		scanf("%d" , &num);
+		
+		switch(choice) {
+			case 1:
+				if(num % 2 == 0) {
+					printf("%d is an even number\n" , num);
+				} else {
+						printf("%d is an odd number\n" , num);
+				}
+				break;
+			case 2:
+				if(num <= 1) {
+					flag = 0;
+				} else {
+					flag = 1;
+					for (i = 2; i <= num / 2; i++) {
+						if(num % i == 0 ) {
+							flag = 0;
+							break;
+						}
+					} 
+				}
+				if (flag == 1) {
+					printf("%d is a prime number\n" , num);
+				} else {
+					printf("%d is not a prime number\n" , num);
+				}
+				break;
+			case 3:
+				originalNum = num;
+				revNum = 0;
+				while (num != 0) {
+					rem = num % 10;
+					revNum = revNum * 10 + rem;
+					num = num / 10; 
+				}
+				if(originalNum == revNum) {
+					printf("%d is a palindrome number\n" , originalNum);
+				} else {
+					printf("%d is not a palindrome number\n" , originalNum);
+				}
+				break;
+			case 4:
+				if(num > 0) {
+					printf("%d is a positive number\n" , num);
+				} else if(num < 0){
+						printf("%d is a negative number\n" , num);
+				} else {
+						printf("%d is a zero\n" , num);
+				}
+				break;
+			case 5:
+				revNum = 0;
+				while(num != 0) {
+					rem = num % 10;
+					revNum = revNum * 10 + rem;
+					num = num / 10;
+				}
+				printf("The reversed number: %d\n" , revNum);
+				break;
+			case 6:
+				sum = 0;
+				while(num != 0) {
+					rem = num % 10;
+					sum = sum + rem;
+					num = num / 10;
+				}
+				printf("The sum of the digits is: %d\n", sum);
+				break;
+			default:
+				printf("Invalid choice\n");
+		}
+		
+		printf("Do you want to continue? (y/n): ");
+		scanf(" %c " , &continue_choice);
+	} while(continue_choice == 'y' || continue_choice == 'Y');
+}
