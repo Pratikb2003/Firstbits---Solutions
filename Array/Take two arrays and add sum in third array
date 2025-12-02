@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+	int arr1[100], arr2[200], arr3[300], size, i;
+	printf("Enter the size of the arrays: ");
+	scanf("%d" , &size); 
+	printf("Enter the elements of the first array: ");
+	for(int i = 0; i < size; i++) {
+	scanf("%d" , &arr1[i]); 
+	}
+	printf("Enter the elements of the second array: ");
+	for(int i = 0; i < size; i++) {
+	scanf("%d" , &arr2[i]); 
+	}
+	for(int i = 0; i < size; i++) {
+	arr3[i] = arr1[i] + arr2[i];
+    } 
+	printf("The third array (sum of first two) is:");
+	  for(int i = 0; i < size; i++) {
+	    printf("%d " , arr3[i]);
+	}
+	printf("\n");
+}
