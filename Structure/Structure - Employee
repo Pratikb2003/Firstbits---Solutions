@@ -1,0 +1,19 @@
+#include<stdio.h>
+struct Employee {
+	int id;
+	char name[20];
+	int salary;
+};
+void store(struct Employee *e) {
+	printf("Enter id, name & salary: ");
+	scanf("%d %s %d" , &e->id, e->name, &e->salary);
+}
+void display (struct Employee *e) {
+	printf("\n--- Employee Details ---\n");
+	printf("ID: %d\nName: %s\nSalary: %d\n" , e->id, e->name, e->salary);
+}
+void main() {
+	struct Employee e;
+	store(&e);
+	display(&e);
+}
