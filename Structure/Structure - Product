@@ -1,0 +1,20 @@
+#include<stdio.h>
+struct Product {
+	int id;
+	char name[20];
+	int quantity;
+	int price;
+};
+void store(struct Product *p) {
+	printf("Enter id, name, quantity and price: ");
+	scanf("%d %s %d %d" , &p->id, p->name, &p->quantity, &p->price);
+}
+void display(struct Product p) {
+	printf("\n--- Product Details --- \n");
+	printf("ID: %d\nName: %s\nQuantity: %d\nPrice: %d\n" , p.id, p.name, p.quantity, p.price);
+}
+void main() {
+	struct Product p;
+	store(&p);
+	display(p);
+}
