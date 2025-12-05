@@ -1,0 +1,21 @@
+#include<stdio.h>
+struct SalesManager {
+	int id;
+	char name[20];
+	int salary;
+	int incentive;
+	int target;
+};
+void store(struct SalesManager *s) {
+	printf("Enter id, name, salary, incentive, target: ");
+	scanf("%d %s %d %d %d" , &s->id, s->name, &s->salary, &s->incentive, &s->target);
+}
+void display(struct SalesManager s) {
+	printf("\n--- Sales Manager Details ---\n");
+	printf("ID: %d\nName: %s\nSalary: %d\nIncentive: %d\nTarget: %d\n" , s.id, s.name, s.salary, s.incentive, s.target);
+}
+void main() {
+	struct SalesManager sm;
+	store(&sm);
+	display(sm);
+}
