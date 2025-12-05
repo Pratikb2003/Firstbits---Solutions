@@ -1,0 +1,20 @@
+#include<stdio.h>
+struct Admin {
+	int id;
+	char name[20];
+	int salary;
+	float allowance;
+};
+void store(struct Admin *a) {
+	printf("Enter id, name, salary, allowance");
+	scanf("%d %s %d %f" , &a->id , a->name , &a->salary , &a->allowance);
+}
+void display(struct Admin a) {
+	printf("\n---- Admin details ----\n");
+	printf("ID: %d\nName: %s\nSalary: %d\nAllowance: %.2f\n" , a.id , a.name , a.salary , a.allowance);
+}
+int main() {
+	struct Admin a;
+	store(&a);
+	display(a);
+}
