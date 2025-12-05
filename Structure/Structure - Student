@@ -1,0 +1,19 @@
+#include<stdio.h>
+struct Student {
+	int rollNo;
+	char name[20];
+	int marks;
+};
+void store(struct Student *s) {
+	printf("Enter roll no, name, & marks: ");
+	scanf("%d %s %d", &s->rollNo, s->name, &s->marks);
+}
+void display(struct Student s) {
+	printf("\n--- Student Details ---\n");
+	printf("Roll No: %d\nName: %s\nMarks: %d\n" , s.rollNo, s.name, s.marks);
+}
+void main() {
+	struct Student s;
+	store(&s);
+	display(s);
+}
