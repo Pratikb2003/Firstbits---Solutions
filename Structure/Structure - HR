@@ -1,0 +1,20 @@
+#include<stdio.h>
+struct HR {
+	int id;
+	char name[20];
+	int salary;
+	int commission;
+};
+void store(struct HR *h) {
+	printf("Enter id, name, salary, commission: ");
+	scanf("%d %s %d %d" , &h->id, h->name, &h->salary, &h->commission);
+}
+void display(struct HR h) {
+	printf("\n---- HR Details ----\n");
+	printf("ID: %d\nName: %s\nSalary: %d\nCommission: %d" , h.id, h.name, h.salary, h.commission);
+}
+void main() {
+	struct HR h;
+	store(&h);
+	display(h);
+}
