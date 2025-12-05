@@ -1,0 +1,18 @@
+#include<stdio.h>
+struct Complex {
+	float real;
+	float imag;
+};
+void store(struct Complex *c) {
+	printf("Enter real and imaginary part: ");
+	scanf("%f %f" , &c->real, &c->imag);
+}
+void display(struct Complex c) {
+	printf("\n---- Complex Number ----\n");
+	printf("%.2f + %.2fi\n" , c.real, c.imag);
+}
+void main() {
+	struct Complex c;
+	store(&c);
+	display(c);
+}
