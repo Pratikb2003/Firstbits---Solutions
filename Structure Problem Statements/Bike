@@ -1,0 +1,20 @@
+#include<stdio.h>
+struct Bike {
+	char name[20];
+	int mileage;
+	int price;
+	char brand[20];
+};
+void store(struct Bike *b) {
+	printf("Enter Name, Mileage, Price, Brand: ");
+	scanf("%s %d %d %s" , b->name, &b->mileage, &b->price, b->brand);
+}
+void display(struct Bike b) {
+	printf("\n--- Bike Details ---\n");
+	scanf("\nName :%s\nMileage :%d\nPrice :%d\nBrand :%d" , b.name, b.mileage, b.price, b.brand);
+}
+void main() {
+	struct Bike b;
+	store(&b);
+	display(b);
+}
