@@ -1,0 +1,20 @@
+#include<stdio.h>
+struct Account {
+	int accountNo;
+	char holder[20];
+	int balance;
+	char name[20];
+};
+void store(struct Account *a) {
+	printf("Enter AccountNo, Holder, Balance, Name: ");
+	scanf("%d %s %d %s" , &a->accountNo, a->holder, &a->balance, a->name);
+}
+void display(struct Account a) {
+	printf("\n--- Account Details ---\n");
+	printf("\nAccountNo :%d\nHolder :%s\nBalance :%d\nName :%s" , a.accountNo, a.holder, a.balance, a.name);
+}
+void main() {
+	struct Account a;
+	store(&a);
+	display(a);
+}
