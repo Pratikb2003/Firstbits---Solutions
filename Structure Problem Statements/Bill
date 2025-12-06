@@ -1,0 +1,20 @@
+#include<stdio.h>
+struct Bill {
+	char name[20];
+	int units;
+	int amount;
+	int period;
+};
+void store(struct Bill *b) {
+	printf("Enter Name, Units, Amount, Period: ");
+	scanf("%s %d %d %d" , b->name, &b->units, &b->amount, &b->period);
+}
+void display(struct Bill b) {
+	printf("\n--- Bill Details ---\n");
+	printf("\nName :%s\nUnits :%d\nAmount :%d\nPeriod :%d" , b.name, b.units, b.amount, b.period);
+}
+void main() {
+	struct Bill b;
+	store(&b);
+	display(b);
+}
