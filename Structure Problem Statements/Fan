@@ -1,0 +1,20 @@
+#include<stdio.h>
+struct Fan {
+	char company[20];
+	int price;
+	int speed;
+	int warranty;
+};
+void store(struct Fan *f) {
+	printf("Enter company, price, speed, warranty: ");
+	scanf("%s %d %d %d" , f->company, f->price, f->speed, f->warranty);
+}
+void display(struct Fan f) {
+	printf("\n- Fan Details -\n");
+	printf("\nCompany :%s\nPrice :%d\nSpeed :%d years" , f.company, f.price, f.speed, f.warranty);
+}
+void main() {
+	struct Fan f;
+	store(&f);
+	display(f);
+}
