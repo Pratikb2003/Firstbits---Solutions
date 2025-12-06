@@ -1,0 +1,20 @@
+#include<stdio.h>
+struct Laptop {
+	char brand[20];
+	char processor[20];
+	int ram;
+	int price;
+};
+void store(struct Laptop *l) {
+	printf("Enter brand, processor, ram, price: ");
+	scanf("%s %s %d %d" , l->brand, l->processor, &l->ram, &l->price);
+}
+void display(struct Laptop l) {
+	printf("\n-- Laptop Details --\n");
+	printf("\nBrand :%s\nProcessor :%s\nRam :%d\nPrice :%d" , l.brand, l.processor, l.ram, l.price);
+}
+void main() {
+	struct Laptop l;
+	store(&l);
+	display(l);
+}
