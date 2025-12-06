@@ -1,0 +1,19 @@
+#include<stdio.h>
+struct Player {
+	char name[20];
+	int runs;
+	float strikeRate;
+};
+void store(struct Player *p) {
+	printf("Enter Name, Runs, StrikeRate: ");
+	scanf("%s %d %f" , p->name , &p->runs, &p ->strikeRate);
+}
+void display(struct Player p) {
+	printf("\n----- Player Details -----\n");
+	scanf("\nName :%s\nRuns :%d\nStrikeRate :%.2f" , p.name, p.runs, p.strikeRate);
+}
+void main() {
+	struct Player p;
+	store(&p);
+	display(p);
+}
