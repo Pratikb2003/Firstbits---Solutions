@@ -1,0 +1,20 @@
+#include<stdio.h>
+struct Patient {
+	char name[20];
+	int age;
+	int bill;
+	char bloodGroup;
+};
+void store(struct Patient *p) {
+	printf("Enter Name, Age, Bill, BloodGroup: ");
+	scanf("%s %d %d %s" , p->name, &p->age, &p->bill, p->bloodGroup);
+}
+void display(struct Patient p) {
+	printf("\n--- Patient Details ---\n");
+	printf("\nName :%s\nAge :%d\nBill :%d\nBloodGroup :%s" , p.name, p.age, p.bill, p.bloodGroup);
+}
+void main() {
+	struct Patient p;
+	store(&p);
+	display(p);
+}
