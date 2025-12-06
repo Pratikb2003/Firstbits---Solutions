@@ -1,0 +1,19 @@
+#include<stdio.h>
+struct Movie {
+	char title[20];
+	char actor[30];
+	char actress[40];
+};
+void store(struct Movie *m) {
+	printf("Enter title, actor, actress: ");
+	scanf("%s %s %s" , m->title , m->actor, m->actress);
+}
+void display(struct Movie m) {
+	printf("\n--- Movie Details ---\n");
+	printf("\nTitle :%s\nActor %s:\nActress :%s" , m.title, m.actor, m.actress);
+}
+void main() {
+	struct Movie m;
+	store(&m);
+	display(m);
+}
