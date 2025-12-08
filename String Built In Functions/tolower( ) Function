@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+int main()
+{
+	char str1[50] = "FirstBit Solutions";
+	char str2[50] = "Learn IT Bit by Bit";
+	char str3[50];
+	char str4[50] = "firstbit";
+	char str5[50] = "SOLUTIONS";
+	char *ptr;
+	printf("Original String 1: %s\n" , str1);
+	printf("Original String 2: %s\n\n" , str2);
+	//13. strlwr() - not standard, simulate
+	for(int i = 0; str5[i]; i++) {
+		str5[i] = tolower(str5[i]);
+	}
+	printf("Lowercase: %s\n" , str5);
+}
