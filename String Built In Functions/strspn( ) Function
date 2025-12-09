@@ -11,6 +11,6 @@ int main()
 	char *ptr;
 	printf("Original String 1: %s\n" , str1);
 	printf("Original String 2: %s\n\n" , str2);
-	//21. strspn()
+	//strspn()
 	printf("strspn(): Initial alphabet count in 'First123' = %lu\n" , strspn("First123", "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"));
 }
