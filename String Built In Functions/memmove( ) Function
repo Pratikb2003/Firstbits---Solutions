@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <string.h> // Required for string functions
+
+int main() {
+    char str1[50] = "Hello";
+    char str2[] = " World!";
+    char str3[50];
+    char str4[] = "apple";
+    char str5[] = "banana";
+    //memmove() - Copies a block of memory, handling overlapping regions
+    char overlap_str[] = "abcdefg";
+    memmove(overlap_str + 2, overlap_str, 5);
+    printf("memmove result: %s\n", overlap_str);
