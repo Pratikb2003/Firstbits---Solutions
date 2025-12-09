@@ -1,0 +1,11 @@
+    #include <stdio.h>
+    #include <string.h>
+
+    int main() {
+        char source[] = "Programming";
+        char destination[10];
+        strncpy(destination, source, 5);
+        destination[5] = '\0';
+        printf("Copied 5 chars: %s\n", destination);
+        return 0;
+    }
