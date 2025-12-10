@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h> // Required for string functions
+
+int main() {
+    char str1[50] = "Hello";
+    char str2[] = " World!";
+    char str3[50];
+    char str4[] = "apple";
+    char str5[] = "banana";
+    //strpbrk() - Finds the first occurrence of any character from a set of characters
+    char search_str[] = "programming";
+    char char_set[] = "aeiou";
+    char *pbrk_ptr = strpbrk(search_str, char_set);
+    if (pbrk_ptr != NULL) {
+        printf("First vowel found at position: %ld\n", pbrk_ptr - search_str);
+    }
