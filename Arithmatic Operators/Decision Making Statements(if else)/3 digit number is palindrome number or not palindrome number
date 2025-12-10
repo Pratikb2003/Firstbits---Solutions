@@ -8,6 +8,7 @@ int main()
 	}
 	else
 	{
-		printf("%d is an odd number.\n",no);
+		printf("%d is an odd number.\n ",no);
 	}
+
 }
