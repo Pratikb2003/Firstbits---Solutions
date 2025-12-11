@@ -7,4 +7,4 @@ int main() {
     strcpy(destination, source);
     printf("Copied string: %s\n", destination);
     return 0;
-}
+}-
