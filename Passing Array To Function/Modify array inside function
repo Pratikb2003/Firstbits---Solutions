@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+void change(int arr[], int size) {
+    arr[0] = 999;  // modify first element
+}
+
+int main() {
+    int a[3] = {1, 2, 3};
+
+    change(a, 3);
+
+    printf("After change: %d %d %d", a[0], a[1], a[2]);
+
+    return 0;
+}
