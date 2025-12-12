@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+void countNumbers(int arr[], int n, int *pos, int *neg, int *zero) {
+    *pos = *neg = *zero = 0;
+
+    for(int i = 0; i < n; i++) {
+        if(arr[i] > 0)
+            (*pos)++;
+        else if(arr[i] < 0)
+            (*neg)++;
+        else
+            (*zero)++;
+    }
+}
+
+int main() {
+    int a[8] = {10, -3, 0, 4, -1, 7, 0, -5};
+    int posCount, negCount, zeroCount;
+
+    countNumbers(a, 8, &posCount, &negCount, &zeroCount);
+
+    printf("Positive = %d\n", posCount);
+    printf("Negative = %d\n", negCount);
+    printf("Zero = %d\n", zeroCount);
+
+    return 0;
+}
