@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int string_length(char *str); 
+
+int main() {
+    char my_string[] = "Hello, World!";
+    int length = string_length(my_string); 
+    printf("The length of the string is: %d\\n", length);
+    return 0;
+}
+
+int string_length(char *str) {
+    int count = 0;
+    while (str[count] != '\\0') {
+        count++;
+    }
+    return count;
+}
