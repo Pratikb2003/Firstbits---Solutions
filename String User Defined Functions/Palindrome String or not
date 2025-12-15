@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int isPalindrome(char str[])
+{
+    int i = 0, j = 0;
+
+    /* Find length */
+    while (str[j] != '\0')
+        j++;
+
+    j = j - 1;   // last index
+
+    /* Compare characters */
+    while (i < j)
+    {
+        if (str[i] != str[j])
+            return 0;   // Not palindrome
+        i++;
+        j--;
+    }
+    return 1;   // Palindrome
+}
+
+int main()
+{
+    char str[50];
+
+    printf("Enter a string: ");
+    gets(str);
+
+    if (isPalindrome(str))
+        printf("String is Palindrome");
+    else
+        printf("String is Not Palindrome");
+
+    return 0;
+}
