@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int firstOccurrence(char str[], char ch)
+{
+    int i = 0;
+
+    while (str[i] != '\0')
+    {
+        if (str[i] == ch)
+            return i;   // index position
+        i++;
+    }
+    return -1;  // not found
+}
+
+int main()
+{
+    char str[50], ch;
+
+    printf("Enter a string: ");
+    gets(str);
+
+    printf("Enter character to search: ");
+    scanf("%c", &ch);
+
+    int pos = firstOccurrence(str, ch);
+
+    if (pos == -1)
+        printf("Character not found");
+    else
+        printf("Character found at index %d", pos);
+
+    return 0;
+}
