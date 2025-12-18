@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int charFrequency(char str[], char ch)
+{
+    int i = 0, count = 0;
+
+    while (str[i] != '\0')
+    {
+        if (str[i] == ch)
+            count++;
+        i++;
+    }
+    return count;
+}
+
+int main()
+{
+    char str[50], ch;
+
+    printf("Enter a string: ");
+    gets(str);
+
+    printf("Enter character to find frequency: ");
+    scanf("%c", &ch);
+
+    printf("Frequency of '%c' = %d", ch, charFrequency(str, ch));
+    return 0;
+}
