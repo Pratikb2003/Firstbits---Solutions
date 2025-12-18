@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+void replaceCharacter(char str[], char oldChar, char newChar)
+{
+    int i = 0;
+
+    while (str[i] != '\0')
+    {
+        if (str[i] == oldChar)
+            str[i] = newChar;
+        i++;
+    }
+}
+
+int main()
+{
+    char str[100], oldChar, newChar;
+
+    printf("Enter a string: ");
+    gets(str);
+
+    printf("Enter character to replace: ");
+    scanf("%c", &oldChar);
+
+    getchar();
+
+    printf("Enter new character: ");
+    scanf("%c", &newChar);
+
+    replaceCharacter(str, oldChar, newChar);
+
+    printf("Modified string: %s", str);
+
+    return 0;
+}
