@@ -1,0 +1,14 @@
+class MinNumber {
+
+    static int min(int a, int b) {
+        if (a < b)
+            return a;
+        else
+            return b;
+    }
+
+    public static void main(String[] args) {
+        int result = min(12, 8);
+        System.out.println("Minimum = " + result);
+    }
+}
