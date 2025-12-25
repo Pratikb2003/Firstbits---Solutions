@@ -1,0 +1,11 @@
+class Temperature {
+
+    static double celsiusToFahrenheit(double c) {
+        return (c * 9 / 5) + 32;
+    }
+
+    public static void main(String[] args) {
+        double f = celsiusToFahrenheit(37);
+        System.out.println("Fahrenheit = " + f);
+    }
+}
