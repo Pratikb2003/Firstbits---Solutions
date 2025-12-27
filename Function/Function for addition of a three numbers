@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main()
+{
+    int a = 2;
+    int b = 5;
+    int c = 10;
+    int d = a + b + c + d;
+    printf("The sum is a an the %d", d);
+}
