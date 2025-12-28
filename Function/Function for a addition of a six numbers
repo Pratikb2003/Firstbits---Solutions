@@ -1,0 +1,9 @@
+#include<stdio.h>
+int a = 55;
+int b = 60;
+int c = 65;
+int d = 70;
+int e = 75;
+int f = 80;
+int g = a + b + c + d + e + f;
+Printf("The sum is %d",g);
