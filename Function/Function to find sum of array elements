@@ -1,0 +1,15 @@
+class MultipleOfTen {
+
+    static boolean isMultipleOfTen(int num) {
+        return num % 10 == 0;
+    }
+
+    public static void main(String[] args) {
+        int num = 50;
+
+        if (isMultipleOfTen(num))
+            System.out.println(num + " is a multiple of 10");
+        else
+            System.out.println(num + " is not a multiple of 10");
+    }
+}
