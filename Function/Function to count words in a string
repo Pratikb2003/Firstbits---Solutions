@@ -1,0 +1,18 @@
+class WordCount {
+
+    static int countWords(String str) {
+        int count = 1;
+
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == ' ')
+                count++;
+        }
+        return count;
+    }
+
+    public static void main(String[] args) {
+        String sentence = "Java is easy language";
+        int result = countWords(sentence);
+        System.out.println("Word count = " + result);
+    }
+}
