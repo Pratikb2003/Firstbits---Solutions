@@ -1,0 +1,14 @@
+class EvenOddReturn {
+
+    static String evenOdd(int num) {
+        if (num % 2 == 0)
+            return "Even";
+        else
+            return "Odd";
+    }
+
+    public static void main(String[] args) {
+        String result = evenOdd(11);
+        System.out.println("Number is " + result);
+    }
+}
