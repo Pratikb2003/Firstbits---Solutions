@@ -1,0 +1,14 @@
+class UpperToLower {
+
+    static char toLower(char ch) {
+        if (ch >= 'A' && ch <= 'Z')
+            return (char)(ch + 32);
+        else
+            return ch;
+    }
+
+    public static void main(String[] args) {
+        char result = toLower('H');
+        System.out.println("Lowercase = " + result);
+    }
+}
