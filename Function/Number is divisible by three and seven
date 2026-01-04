@@ -1,0 +1,15 @@
+class DivisibleBy3And7 {
+
+    static boolean isDivisible(int num) {
+        return (num % 3 == 0 && num % 7 == 0);
+    }
+
+    public static void main(String[] args) {
+        int num = 21;
+
+        if (isDivisible(num))
+            System.out.println(num + " is divisible by 3 and 7");
+        else
+            System.out.println(num + " is not divisible by 3 and 7");
+    }
+}
