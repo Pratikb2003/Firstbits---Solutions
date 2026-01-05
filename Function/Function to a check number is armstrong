@@ -1,0 +1,33 @@
+class ArmstrongAny {
+
+    static boolean isArmstrong(int num) {
+        int original = num;
+        int digits = 0;
+        int temp = num;
+
+        while (temp != 0) {
+            digits++;
+            temp /= 10;
+        }
+
+        int sum = 0;
+        temp = num;
+
+        while (temp != 0) {
+            int digit = temp % 10;
+            sum += Math.pow(digit, digits);
+            temp /= 10;
+        }
+
+        return sum == original;
+    }
+
+    public static void main(String[] args) {
+        int num = 1634;
+
+        if (isArmstrong(num))
+            System.out.println(num + " is Armstrong");
+        else
+            System.out.println(num + " is Not Armstrong");
+    }
+}
