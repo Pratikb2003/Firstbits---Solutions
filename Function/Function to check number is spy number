@@ -1,0 +1,25 @@
+class SpyNumber {
+
+    static boolean isSpy(int num) {
+        int sum = 0;
+        int product = 1;
+
+        while (num != 0) {
+            int digit = num % 10;
+            sum = sum + digit;
+            product = product * digit;
+            num = num / 10;
+        }
+
+        return sum == product;
+    }
+
+    public static void main(String[] args) {
+        int num = 1124;
+
+        if (isSpy(num))
+            System.out.println(num + " is a Spy Number");
+        else
+            System.out.println(num + " is Not a Spy Number");
+    }
+}
