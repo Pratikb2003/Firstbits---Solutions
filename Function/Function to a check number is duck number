@@ -1,0 +1,21 @@
+class DuckNumber {
+
+    static boolean isDuck(int num) {
+
+        while (num != 0) {
+            if (num % 10 == 0)
+                return true;
+            num = num / 10;
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        int num = 1023;
+
+        if (isDuck(num))
+            System.out.println(num + " is a Duck Number");
+        else
+            System.out.println(num + " is Not a Duck Number");
+    }
+}
