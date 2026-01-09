@@ -1,0 +1,17 @@
+class SunnyNumber {
+
+    static boolean isSunny(int num) {
+        int next = num + 1;
+        int sqrt = (int) Math.sqrt(next);
+        return sqrt * sqrt == next;
+    }
+
+    public static void main(String[] args) {
+        int num = 8;
+
+        if (isSunny(num))
+            System.out.println(num + " is a Sunny Number");
+        else
+            System.out.println(num + " is Not a Sunny Number");
+    }
+}
