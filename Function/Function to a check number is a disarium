@@ -1,0 +1,32 @@
+class DisariumNumber {
+
+    static boolean isDisarium(int num) {
+        int sum = 0;
+        int digits = 0;
+        int temp = num;
+
+        while (temp != 0) {
+            digits++;
+            temp = temp / 10;
+        }
+
+        temp = num;
+        while (temp != 0) {
+            int digit = temp % 10;
+            sum += Math.pow(digit, digits);
+            digits--;
+            temp = temp / 10;
+        }
+
+        return sum == num;
+    }
+
+    public static void main(String[] args) {
+        int num = 135;
+
+        if (isDisarium(num))
+            System.out.println(num + " is a Disarium Number");
+        else
+            System.out.println(num + " is Not a Disarium Number");
+    }
+}
