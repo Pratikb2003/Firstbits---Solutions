@@ -1,0 +1,16 @@
+class PerfectSquare {
+
+    static boolean isPerfectSquare(int num) {
+        int sqrt = (int) Math.sqrt(num);
+        return sqrt * sqrt == num;
+    }
+
+    public static void main(String[] args) {
+        int num = 49;
+
+        if (isPerfectSquare(num))
+            System.out.println(num + " is a Perfect Square");
+        else
+            System.out.println(num + " is Not a Perfect Square");
+    }
+}
