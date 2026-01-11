@@ -1,0 +1,30 @@
+class HappyNumber {
+
+    static int sumOfSquares(int num) {
+        int sum = 0;
+
+        while (num != 0) {
+            int digit = num % 10;
+            sum = sum + (digit * digit);
+            num = num / 10;
+        }
+        return sum;
+    }
+
+    static boolean isHappy(int num) {
+
+        while (num != 1 && num != 4) {
+            num = sumOfSquares(num);
+        }
+        return num == 1;
+    }
+
+    public static void main(String[] args) {
+        int num = 19;
+
+        if (isHappy(num))
+            System.out.println(num + " is a Happy Number");
+        else
+            System.out.println(num + " is Not a Happy Number");
+    }
+}
