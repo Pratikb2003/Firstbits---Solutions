@@ -1,0 +1,20 @@
+class PronicNumber {
+
+    static boolean isPronic(int num) {
+
+        for (int i = 0; i * (i + 1) <= num; i++) {
+            if (i * (i + 1) == num)
+                return true;
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        int num = 12;
+
+        if (isPronic(num))
+            System.out.println(num + " is a Pronic Number");
+        else
+            System.out.println(num + " is Not a Pronic Number");
+    }
+}
