@@ -1,0 +1,24 @@
+class TrimorphicNumber {
+
+    static boolean isTrimorphic(int num) {
+        int cube = num * num * num;
+        int temp = num;
+
+        while (temp != 0) {
+            if (temp % 10 != cube % 10)
+                return false;
+            temp = temp / 10;
+            cube = cube / 10;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int num = 4;
+
+        if (isTrimorphic(num))
+            System.out.println(num + " is a Trimorphic Number");
+        else
+            System.out.println(num + " is Not a Trimorphic Number");
+    }
+}
