@@ -1,0 +1,28 @@
+class KaprekarNumber {
+
+    static boolean isKaprekar(int num) {
+        int square = num * num;
+        int temp = square;
+        int digits = 0;
+
+        while (temp != 0) {
+            digits++;
+            temp /= 10;
+        }
+
+        int divisor = (int) Math.pow(10, digits / 2);
+        int left = square / divisor;
+        int right = square % divisor;
+
+        return right != 0 && (left + right == num);
+    }
+
+    public static void main(String[] args) {
+        int num = 45;
+
+        if (isKaprekar(num))
+            System.out.println(num + " is a Kaprekar Number");
+        else
+            System.out.println(num + " is Not a Kaprekar Number");
+    }
+}
