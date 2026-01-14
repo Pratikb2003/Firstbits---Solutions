@@ -1,0 +1,21 @@
+class FascinatingNumber {
+
+    static boolean isFascinating(int num) {
+        String s = "" + num + (num * 2) + (num * 3);
+
+        for (char c = '1'; c <= '9'; c++) {
+            if (s.indexOf(c) == -1)
+                return false;
+        }
+        return s.length() == 9;
+    }
+
+    public static void main(String[] args) {
+        int num = 192;
+
+        if (isFascinating(num))
+            System.out.println(num + " is a Fascinating Number");
+        else
+            System.out.println(num + " is Not a Fascinating Number");
+    }
+}
