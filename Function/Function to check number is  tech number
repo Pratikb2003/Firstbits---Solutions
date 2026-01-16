@@ -1,0 +1,26 @@
+class TechNumber {
+
+    static boolean isTech(int num) {
+        int digits = String.valueOf(num).length();
+
+        if (digits % 2 != 0)
+            return false;
+
+        int divisor = (int) Math.pow(10, digits / 2);
+        int first = num / divisor;
+        int second = num % divisor;
+
+        int sum = first + second;
+
+        return sum * sum == num;
+    }
+
+    public static void main(String[] args) {
+        int num = 2025;
+
+        if (isTech(num))
+            System.out.println(num + " is a Tech Number");
+        else
+            System.out.println(num + " is Not a Tech Number");
+    }
+}
