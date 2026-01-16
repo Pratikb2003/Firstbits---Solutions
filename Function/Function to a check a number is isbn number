@@ -1,0 +1,24 @@
+class ISBNNumber {
+
+    static boolean isISBN(long num) {
+        int sum = 0;
+        int count = 1;
+
+        while (num != 0) {
+            int digit = (int)(num % 10);
+            sum += digit * count;
+            count++;
+            num /= 10;
+        }
+        return sum % 11 == 0;
+    }
+
+    public static void main(String[] args) {
+        long num = 1259060977L;
+
+        if (isISBN(num))
+            System.out.println(num + " is a Valid ISBN Number");
+        else
+            System.out.println(num + " is Invalid ISBN Number");
+    }
+}
