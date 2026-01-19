@@ -1,0 +1,18 @@
+class SpecialTwoDigit {
+
+    static boolean isSpecial(int num) {
+        int a = num / 10;
+        int b = num % 10;
+
+        return (a + b + (a * b)) == num;
+    }
+
+    public static void main(String[] args) {
+        int num = 59;
+
+        if (isSpecial(num))
+            System.out.println(num + " is Special Two Digit Number");
+        else
+            System.out.println(num + " is Not Special Two Digit Number");
+    }
+}
