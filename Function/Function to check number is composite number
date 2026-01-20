@@ -1,0 +1,23 @@
+class CompositeNumber {
+
+    static boolean isComposite(int num) {
+        if (num <= 1) return false;
+
+        int count = 0;
+
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0)
+                count++;
+        }
+        return count > 2;
+    }
+
+    public static void main(String[] args) {
+        int num = 12;
+
+        if (isComposite(num))
+            System.out.println(num + " is Composite Number");
+        else
+            System.out.println(num + " is Not Composite Number");
+    }
+}
