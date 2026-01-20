@@ -1,0 +1,35 @@
+class MegaPrime {
+
+    static boolean isPrime(int num) {
+        if (num < 2) return false;
+
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0)
+                return false;
+        }
+        return true;
+    }
+
+    static boolean isMegaPrime(int num) {
+        if (!isPrime(num)) return false;
+
+        while (num != 0) {
+            int d = num % 10;
+
+            if (!(d == 2 || d == 3 || d == 5 || d == 7))
+                return false;
+
+            num /= 10;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int num = 23;
+
+        if (isMegaPrime(num))
+            System.out.println(num + " is Mega Prime");
+        else
+            System.out.println(num + " is Not Mega Prime");
+    }
+}
