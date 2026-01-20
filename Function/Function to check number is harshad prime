@@ -1,0 +1,35 @@
+class HarshadPrime {
+
+    static boolean isPrime(int num) {
+        if (num < 2) return false;
+
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0)
+                return false;
+        }
+        return true;
+    }
+
+    static boolean isHarshad(int num) {
+        int sum = 0, temp = num;
+
+        while (temp != 0) {
+            sum += temp % 10;
+            temp /= 10;
+        }
+        return num % sum == 0;
+    }
+
+    static boolean isHarshadPrime(int num) {
+        return isPrime(num) && isHarshad(num);
+    }
+
+    public static void main(String[] args) {
+        int num = 2;
+
+        if (isHarshadPrime(num))
+            System.out.println(num + " is Harshad Prime");
+        else
+            System.out.println(num + " is Not Harshad Prime");
+    }
+}
