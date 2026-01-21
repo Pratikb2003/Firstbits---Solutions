@@ -1,0 +1,35 @@
+class PalindromePrime {
+
+    static boolean isPrime(int num) {
+        if (num < 2) return false;
+
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0)
+                return false;
+        }
+        return true;
+    }
+
+    static boolean isPalindrome(int num) {
+        int rev = 0, temp = num;
+
+        while (temp != 0) {
+            rev = rev * 10 + temp % 10;
+            temp /= 10;
+        }
+        return rev == num;
+    }
+
+    static boolean isPalindromePrime(int num) {
+        return isPrime(num) && isPalindrome(num);
+    }
+
+    public static void main(String[] args) {
+        int num = 131;
+
+        if (isPalindromePrime(num))
+            System.out.println(num + " is Palindrome Prime");
+        else
+            System.out.println(num + " is Not Palindrome Prime");
+    }
+}
