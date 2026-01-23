@@ -1,0 +1,37 @@
+class SpyPrime {
+
+    static boolean isPrime(int num) {
+        if (num < 2) return false;
+
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0)
+                return false;
+        }
+        return true;
+    }
+
+    static boolean isSpy(int num) {
+        int sum = 0, product = 1;
+
+        while (num != 0) {
+            int digit = num % 10;
+            sum += digit;
+            product *= digit;
+            num /= 10;
+        }
+        return sum == product;
+    }
+
+    static boolean isSpyPrime(int num) {
+        return isPrime(num) && isSpy(num);
+    }
+
+    public static void main(String[] args) {
+        int num = 112;
+
+        if (isSpyPrime(num))
+            System.out.println(num + " is Spy Prime");
+        else
+            System.out.println(num + " is Not Spy Prime");
+    }
+}
