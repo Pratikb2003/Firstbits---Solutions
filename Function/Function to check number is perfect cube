@@ -1,0 +1,16 @@
+class PerfectCube {
+
+    static boolean isPerfectCube(int num) {
+        int cubeRoot = (int) Math.round(Math.cbrt(num));
+        return cubeRoot * cubeRoot * cubeRoot == num;
+    }
+
+    public static void main(String[] args) {
+        int num = 125;
+
+        if (isPerfectCube(num))
+            System.out.println(num + " is Perfect Cube");
+        else
+            System.out.println(num + " is Not Perfect Cube");
+    }
+}
