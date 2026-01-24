@@ -1,0 +1,20 @@
+class SquareFree {
+
+    static boolean isSquareFree(int num) {
+
+        for (int i = 2; i * i <= num; i++) {
+            if (num % (i * i) == 0)
+                return false;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int num = 10;
+
+        if (isSquareFree(num))
+            System.out.println(num + " is Square Free Number");
+        else
+            System.out.println(num + " is Not Square Free Number");
+    }
+}
