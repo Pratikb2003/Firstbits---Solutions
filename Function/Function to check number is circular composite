@@ -1,0 +1,37 @@
+class CircularComposite {
+
+    static boolean isComposite(int num) {
+        if (num <= 1) return false;
+
+        int count = 0;
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0)
+                count++;
+        }
+        return count > 2;
+    }
+
+    static boolean isCircularComposite(int num) {
+        int digits = String.valueOf(num).length();
+        int temp = num;
+
+        for (int i = 0; i < digits; i++) {
+
+            if (!isComposite(temp))
+                return false;
+
+            int last = temp % 10;
+            temp = (last * (int)Math.pow(10, digits - 1)) + (temp / 10);
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int num = 46;
+
+        if (isCircularComposite(num))
+            System.out.println(num + " is Circular Composite");
+        else
+            System.out.println(num + " is Not Circular Composite");
+    }
+}
