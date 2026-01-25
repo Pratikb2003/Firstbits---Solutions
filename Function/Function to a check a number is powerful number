@@ -1,0 +1,23 @@
+class PowerfulNumber {
+
+    static boolean isPowerful(int num) {
+
+        for (int i = 2; i * i <= num; i++) {
+            if (num % i == 0) {
+
+                if (num % (i * i) != 0)
+                    return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int num = 36;
+
+        if (isPowerful(num))
+            System.out.println(num + " is Powerful Number");
+        else
+            System.out.println(num + " is Not Powerful Number");
+    }
+}
