@@ -1,0 +1,36 @@
+class StrongComposite {
+
+    static boolean isComposite(int num) {
+        if (num <= 1) return false;
+
+        int count = 0;
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0)
+                count++;
+        }
+        return count > 2;
+    }
+
+    static int digitSum(int num) {
+        int sum = 0;
+
+        while (num != 0) {
+            sum += num % 10;
+            num /= 10;
+        }
+        return sum;
+    }
+
+    static boolean isStrongComposite(int num) {
+        return isComposite(num) && isComposite(digitSum(num));
+    }
+
+    public static void main(String[] args) {
+        int num = 24;
+
+        if (isStrongComposite(num))
+            System.out.println(num + " is Strong Composite");
+        else
+            System.out.println(num + " is Not Strong Composite");
+    }
+}
