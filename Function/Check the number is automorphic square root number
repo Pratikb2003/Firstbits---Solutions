@@ -1,0 +1,24 @@
+class AutomorphicSquareRoot {
+
+    static boolean isAutoSqrt(int num) {
+        int sqrt = (int) Math.sqrt(num);
+        int temp = sqrt;
+
+        while (temp != 0) {
+            if (temp % 10 != num % 10)
+                return false;
+            temp /= 10;
+            num /= 10;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int num = 625;
+
+        if (isAutoSqrt(num))
+            System.out.println(num + " is Automorphic Square Root Number");
+        else
+            System.out.println(num + " is Not Automorphic Square Root Number");
+    }
+}
