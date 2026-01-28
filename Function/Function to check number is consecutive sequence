@@ -1,0 +1,25 @@
+class CoPrimeSequence {
+
+    static int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+    static boolean isConsecutiveCoPrime(int a, int b) {
+        return (b - a == 1) && gcd(a, b) == 1;
+    }
+
+    public static void main(String[] args) {
+        int num1 = 14;
+        int num2 = 15;
+
+        if (isConsecutiveCoPrime(num1, num2))
+            System.out.println("They are Consecutive Co-Prime Numbers");
+        else
+            System.out.println("They are Not Consecutive Co-Prime Numbers");
+    }
+}
