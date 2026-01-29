@@ -1,0 +1,25 @@
+class PerfectNumberRecursion {
+
+    static int sumDivisors(int num, int i) {
+        if (i == 0)
+            return 0;
+
+        if (num % i == 0)
+            return i + sumDivisors(num, i - 1);
+
+        return sumDivisors(num, i - 1);
+    }
+
+    static boolean isPerfect(int num) {
+        return sumDivisors(num, num / 2) == num;
+    }
+
+    public static void main(String[] args) {
+        int num = 28;
+
+        if (isPerfect(num))
+            System.out.println(num + " is Perfect Number");
+        else
+            System.out.println(num + " is Not Perfect Number");
+    }
+}
