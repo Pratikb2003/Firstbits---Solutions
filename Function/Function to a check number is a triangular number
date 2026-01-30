@@ -1,0 +1,24 @@
+class TriangularNumber {
+
+    static boolean isTriangular(int num) {
+
+        int sum = 0;
+
+        for (int i = 1; sum <= num; i++) {
+            sum += i;
+
+            if (sum == num)
+                return true;
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        int num = 10;
+
+        if (isTriangular(num))
+            System.out.println(num + " is Triangular Number");
+        else
+            System.out.println(num + " is Not Triangular Number");
+    }
+}
