@@ -1,0 +1,21 @@
+class HexadecimalPalindrome {
+
+    static boolean isHexPalindrome(int num) {
+        String hex = Integer.toHexString(num);
+        String rev = "";
+
+        for (int i = hex.length() - 1; i >= 0; i--) {
+            rev += hex.charAt(i);
+        }
+        return hex.equals(rev);
+    }
+
+    public static void main(String[] args) {
+        int num = 255;
+
+        if (isHexPalindrome(num))
+            System.out.println(num + " is Hexadecimal Palindrome");
+        else
+            System.out.println(num + " is Not Hexadecimal Palindrome");
+    }
+}
