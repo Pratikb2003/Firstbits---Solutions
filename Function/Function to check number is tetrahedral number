@@ -1,0 +1,24 @@
+class TetrahedralNumber {
+
+    static boolean isTetrahedral(int num) {
+
+        for (int n = 1; ; n++) {
+            int value = (n * (n + 1) * (n + 2)) / 6;
+
+            if (value == num)
+                return true;
+
+            if (value > num)
+                return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        int num = 20;
+
+        if (isTetrahedral(num))
+            System.out.println(num + " is Tetrahedral Number");
+        else
+            System.out.println(num + " is Not Tetrahedral Number");
+    }
+}
