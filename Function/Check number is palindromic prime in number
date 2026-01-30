@@ -1,0 +1,35 @@
+class BinaryPalindromicPrime {
+
+    static boolean isPrime(int num) {
+        if (num < 2) return false;
+
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0)
+                return false;
+        }
+        return true;
+    }
+
+    static boolean isBinaryPalindrome(int num) {
+        String bin = Integer.toBinaryString(num);
+        String rev = "";
+
+        for (int i = bin.length() - 1; i >= 0; i--) {
+            rev += bin.charAt(i);
+        }
+        return bin.equals(rev);
+    }
+
+    static boolean isBinaryPalindromicPrime(int num) {
+        return isPrime(num) && isBinaryPalindrome(num);
+    }
+
+    public static void main(String[] args) {
+        int num = 5;
+
+        if (isBinaryPalindromicPrime(num))
+            System.out.println(num + " is Binary Palindromic Prime");
+        else
+            System.out.println(num + " is Not Binary Palindromic Prime");
+    }
+}
