@@ -1,0 +1,24 @@
+class PentagonalNumber {
+
+    static boolean isPentagonal(int num) {
+
+        for (int n = 1; ; n++) {
+            int value = (n * (3 * n - 1)) / 2;
+
+            if (value == num)
+                return true;
+
+            if (value > num)
+                return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        int num = 12;
+
+        if (isPentagonal(num))
+            System.out.println(num + " is Pentagonal Number");
+        else
+            System.out.println(num + " is Not Pentagonal Number");
+    }
+}
