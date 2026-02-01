@@ -1,0 +1,26 @@
+class FibonacciCheck {
+
+    static boolean isFibonacci(int num) {
+
+        int a = 0, b = 1;
+
+        while (a <= num) {
+            if (a == num)
+                return true;
+
+            int c = a + b;
+            a = b;
+            b = c;
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        int num = 21;
+
+        if (isFibonacci(num))
+            System.out.println(num + " is Fibonacci Number");
+        else
+            System.out.println(num + " is Not Fibonacci Number");
+    }
+}
