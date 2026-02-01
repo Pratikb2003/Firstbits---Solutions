@@ -1,0 +1,24 @@
+class HexagonalNumber {
+
+    static boolean isHexagonal(int num) {
+
+        for (int n = 1; ; n++) {
+            int value = n * (2 * n - 1);
+
+            if (value == num)
+                return true;
+
+            if (value > num)
+                return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        int num = 15;
+
+        if (isHexagonal(num))
+            System.out.println(num + " is Hexagonal Number");
+        else
+            System.out.println(num + " is Not Hexagonal Number");
+    }
+}
