@@ -1,0 +1,33 @@
+class CatalanNumber {
+
+    static long factorial(int n) {
+        long fact = 1;
+
+        for (int i = 1; i <= n; i++)
+            fact *= i;
+
+        return fact;
+    }
+
+    static boolean isCatalan(long num) {
+
+        for (int n = 0; ; n++) {
+            long cat = factorial(2 * n) / (factorial(n + 1) * factorial(n));
+
+            if (cat == num)
+                return true;
+
+            if (cat > num)
+                return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        long num = 14;
+
+        if (isCatalan(num))
+            System.out.println(num + " is Catalan Number");
+        else
+            System.out.println(num + " is Not Catalan Number");
+    }
+}
