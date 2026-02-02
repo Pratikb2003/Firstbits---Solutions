@@ -1,0 +1,26 @@
+class LucasCheck {
+
+    static boolean isLucas(int num) {
+
+        int a = 2, b = 1;
+
+        while (a <= num) {
+            if (a == num)
+                return true;
+
+            int c = a + b;
+            a = b;
+            b = c;
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        int num = 18;
+
+        if (isLucas(num))
+            System.out.println(num + " is Lucas Number");
+        else
+            System.out.println(num + " is Not Lucas Number");
+    }
+}
