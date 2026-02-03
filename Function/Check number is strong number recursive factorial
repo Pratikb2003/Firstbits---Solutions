@@ -1,0 +1,27 @@
+class StrongNumberRecursive {
+
+    static int factorial(int n) {
+        if (n == 0)
+            return 1;
+        return n * factorial(n - 1);
+    }
+
+    static boolean isStrong(int num) {
+        int sum = 0, temp = num;
+
+        while (temp != 0) {
+            sum += factorial(temp % 10);
+            temp /= 10;
+        }
+        return sum == num;
+    }
+
+    public static void main(String[] args) {
+        int num = 145;
+
+        if (isStrong(num))
+            System.out.println(num + " is Strong Number");
+        else
+            System.out.println(num + " is Not Strong Number");
+    }
+}
