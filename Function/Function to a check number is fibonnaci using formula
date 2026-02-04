@@ -1,0 +1,21 @@
+class FibonacciFormula {
+
+    static boolean isPerfectSquare(long x) {
+        long s = (long) Math.sqrt(x);
+        return s * s == x;
+    }
+
+    static boolean isFibonacci(long n) {
+        return isPerfectSquare(5 * n * n + 4) ||
+               isPerfectSquare(5 * n * n - 4);
+    }
+
+    public static void main(String[] args) {
+        long num = 34;
+
+        if (isFibonacci(num))
+            System.out.println(num + " is Fibonacci Number");
+        else
+            System.out.println(num + " is Not Fibonacci Number");
+    }
+}
