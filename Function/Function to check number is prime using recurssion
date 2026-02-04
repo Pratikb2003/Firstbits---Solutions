@@ -1,0 +1,25 @@
+class PrimeRecursive {
+
+    static boolean isPrime(int num, int i) {
+
+        if (num <= 2)
+            return (num == 2);
+
+        if (num % i == 0)
+            return false;
+
+        if (i * i > num)
+            return true;
+
+        return isPrime(num, i + 1);
+    }
+
+    public static void main(String[] args) {
+        int num = 17;
+
+        if (isPrime(num, 2))
+            System.out.println(num + " is Prime Number");
+        else
+            System.out.println(num + " is Not Prime Number");
+    }
+}
