@@ -1,0 +1,31 @@
+class SunnyPrime {
+
+    static boolean isPrime(int num) {
+        if (num < 2) return false;
+
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0)
+                return false;
+        }
+        return true;
+    }
+
+    static boolean isSunny(int num) {
+        int next = num + 1;
+        int sqrt = (int)Math.sqrt(next);
+        return sqrt * sqrt == next;
+    }
+
+    static boolean isSunnyPrime(int num) {
+        return isPrime(num) && isSunny(num);
+    }
+
+    public static void main(String[] args) {
+        int num = 3;
+
+        if (isSunnyPrime(num))
+            System.out.println(num + " is Sunny Prime");
+        else
+            System.out.println(num + " is Not Sunny Prime");
+    }
+}
