@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class VectorExample {
+
+    public static void main(String[] args) {
+
+        Vector<String> v = new Vector<>();
+
+        v.add("Java");
+        v.add("Python");
+        v.add("C++");
+
+        System.out.println("Vector Elements:");
+
+        for(String lang : v) {
+            System.out.println(lang);
+        }
+    }
+}
