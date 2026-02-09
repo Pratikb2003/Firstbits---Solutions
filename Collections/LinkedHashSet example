@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class LinkedHashSetExample {
+    public static void main(String[] args) {
+
+        LinkedHashSet<String> set = new LinkedHashSet<>();
+
+        set.add("Red");
+        set.add("Blue");
+        set.add("Green");
+
+        System.out.println(set);
+    }
+}
