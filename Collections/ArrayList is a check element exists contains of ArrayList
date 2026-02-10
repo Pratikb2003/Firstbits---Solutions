@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+
+public class ArrayListExample6 {
+    public static void main(String[] args) {
+
+        ArrayList<String> subjects = new ArrayList<>();
+
+        subjects.add("Math");
+        subjects.add("Science");
+
+        System.out.println(subjects.contains("Math"));
+    }
+}
